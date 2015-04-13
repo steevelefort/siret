@@ -20,7 +20,7 @@
   "author": "Steeve Lefort <steeve@lefort-software.com> (http://www.lefort-software.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/steevelefort/node-siret/issues"
+    "url": "https://github.com/steevelefort/siret/issues"
   },
-  "homepage": "https://github.com/steevelefort/node-siret"
+  "homepage": "https://github.com/steevelefort/siret"
 }
