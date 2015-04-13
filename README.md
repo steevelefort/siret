@@ -1,0 +1,27 @@
+# SIRET
+
+SIRET is a simple validation module for french SIRET and SIREN numbers
+
+#### Installation
+
+`$ npm install siret`
+
+#### Usage
+
+```js
+var siret = require('siret');
+
+console.log(siret.isSIRET('79465311500013'));
+// Return true : this is a SIRET number
+
+console.log(siret.isSIREN('794653115'));
+// Return true : this is a SIREN number
+
+console.log(siret.isSIRET('01234567890123'));
+// Return false : this is NOT a SIRET number
+
+console.log(siret.isSIREN('012345678'));
+// Return false :  : this is NOT a SIRET number
+```
+
+## [MIT Licensed](LICENSE)
