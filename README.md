@@ -21,7 +21,7 @@ console.log(siret.isSIRET('01234567890123'));
 // Return false : this is NOT a SIRET number
 
 console.log(siret.isSIREN('012345678'));
-// Return false :  : this is NOT a SIREN number
+// Return false : this is NOT a SIREN number
 ```
 
 ## [MIT Licensed](LICENSE)
