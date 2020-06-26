@@ -2,11 +2,11 @@
 
 SIRET is a simple validation module for french SIRET and SIREN numbers
 
-#### Installation
+## Installation
 
 `$ npm install siret`
 
-#### Usage
+## Usage
 
 ```js
 var siret = require('siret');
