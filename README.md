@@ -9,7 +9,7 @@ SIRET is a simple validation module for french SIRET and SIREN numbers
 ## Usage
 
 ```js
-var siret = require('siret');
+const siret = require('siret');
 
 console.log(siret.isSIRET('79465211500013'));
 // Return true : this is a SIRET number
