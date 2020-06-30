@@ -1,6 +1,6 @@
 {
   "name": "siret",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple validation module for french SIRET and SIREN numbers",
   "main": "index.js",
   "scripts": {
