@@ -1,12 +1,14 @@
 const siren = require('../index');
 
 describe('isSiren', () => {
-    it ('ok', () => {
-       expect(siren.isSIREN('111111118')).toBeTruthy();
+    it('ok', () => {
+        // String and number shall be accepted
+        expect(siren.isSIREN('111111118')).toBeTruthy();
+        expect(siren.isSIREN(111111118)).toBeTruthy();
     });
 
-    it ('Control key is incorrect', () => {
-       expect(siren.isSIREN('111111111')).toBeFalsy();
+    it('Control key is incorrect', () => {
+        expect(siren.isSIREN('111111111')).toBeFalsy();
     });
 
     it('Luhn correct but too short', () => {
