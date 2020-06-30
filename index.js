@@ -1,9 +1,36 @@
-const isSIRET = function(siret) {
-    return verify(siret,14);
+const _SIRENLength = 9;
+const _SIRETLength = 14;
+
+const getSIREN = function() {
+    const sirenToBe = String(Math.floor(Math.random() * 1e8));
+    let siren = sirenToBe + luhn(sirenToBe);
+
+    // LeftPad with leading 0
+    while (siren.length < _SIRENLength) {
+        siren = '0' + siren;
+    }
+
+    return siren;
+}
+
+const getSIRET = function() {
+    const siretToBe = String(getSIREN() + Math.floor(Math.random() * 1e4));
+    let siret = siretToBe + luhn(siretToBe);
+
+    // LeftPad with leading 0
+    while (siret.length < _SIRETLength) {
+        siret = '0' + siret;
+    }
+
+    return siret;
 }
 
 const isSIREN = function(siren) {
-    return verify(siren,9)
+    return verify(siren, _SIRENLength)
+}
+
+const isSIRET = function(siret) {
+    return verify(siret, _SIRETLength);
 }
 
 /**
@@ -46,6 +73,17 @@ function verify(number, size) {
     return total % 10 === 0;
 }
 
+function luhn(number) {
+    const luhnSum = [...Array.from(number), 0]
+        .reverse()
+        .map((number, index) => index % 2 ? (number * 2 > 9 ? number * 2 - 9 : number * 2) : number)
+        .reduce((sum, number) => sum + parseInt(number, 10));
+
+    return String((10 - luhnSum % 10) % 10);
+}
+
 module.exports = isSIRET;
 module.exports.isSIRET = isSIRET;
 module.exports.isSIREN = isSIREN;
+module.exports.getSIRET = getSIRET;
+module.exports.getSIREN = getSIREN;
