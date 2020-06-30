@@ -1,10 +1,10 @@
 {
   "name": "siret",
-  "version": "1.0.1",
-  "description": "A simple validation module for french SIRET and SIREN numbers",
+  "version": "1.0.3",
+  "description": "A simple validation and generation module for french SIRET and SIREN numbers",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/steevelefort/siret/issues"
   },
-  "homepage": "https://github.com/steevelefort/siret"
+  "homepage": "https://github.com/steevelefort/siret",
+  "devDependencies": {
+    "jasmine": "^3.5.0"
+  }
 }
